@@ -1,85 +1,67 @@
 <script setup>
 import { RouterLink, RouterView } from 'vue-router'
-import HelloWorld from './components/HelloWorld.vue'
+// import HelloWorld from './components/HelloWorld.vue'
+import RendezVousBtn from './components/RendezVousBtn.vue'
 </script>
 
 <template>
-  <header>
+
+  <!-- <header>
     <img alt="Vue logo" class="logo" src="@/assets/logo.svg" width="125" height="125" />
 
     <div class="wrapper">
       <HelloWorld msg="You did it!" />
 
       <nav>
-        <RouterLink to="/">Home</RouterLink>
-        <RouterLink to="/about">About</RouterLink>
+        <RouterLink to="/">Logo</RouterLink>
+        <RouterLink to="/a-propos">A Propos</RouterLink>
       </nav>
     </div>
-  </header>
+  </header> -->
+
+  <nav class="navbar navbar-expand fixed-top font-weight-bold py-2 py-lg-0">
+    <RouterLink to="/">
+      <img src="/src/assets/logo.svg" alt="" height="40px">
+    </RouterLink>
+    
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+			<div class="hamburger-menu"><span></span><span></span><span></span><span></span></div>
+		</button>
+
+    <div class="collapse navbar-collapse justify-content-end pb-3 pb-lg-0" id="collapsibleNavbar">
+			<ul class="navbar-nav">
+				<li class="nav-item a-propos">
+					<RouterLink to="/a-propos" class="nav-link pt-3 pb-1 pb-lg-3">A Propos</RouterLink>
+				</li>
+        <li class="nav-item services">
+          <RouterLink to="/services" class="nav-link pt-3 pb-1 pb-lg-3">Services</RouterLink>
+        </li>
+				<li class="nav-item contact">
+					<RouterLink to="/contact" class="nav-link pt-3 pb-1 pb-lg-3">Contact</RouterLink>
+				</li>
+				<li class="nav-item rendez-vous">
+					<RouterLink to="/rendez-vous" class="nav-link pt-3 pb-1 pb-lg-3"><RendezVousBtn /></RouterLink>
+				</li>
+			</ul>
+		</div>
+  </nav>
 
   <RouterView />
+
+
 </template>
 
 <style scoped>
-header {
-  line-height: 1.5;
-  max-height: 100vh;
+.navbar {
+  height: 60px;
+  background-color: var(--vt-c-black-mute);
+  background: rgba(255, 255, 255, 0.24);
+  border-radius: 0 0 8px 8px;
+  box-shadow: 0 5px 12px 0 rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(6.6px);
+  -webkit-backdrop-filter: blur(6.6px);
 }
 
-.logo {
-  display: block;
-  margin: 0 auto 2rem;
-}
 
-nav {
-  width: 100%;
-  font-size: 12px;
-  text-align: center;
-  margin-top: 2rem;
-}
 
-nav a.router-link-exact-active {
-  color: var(--color-text);
-}
-
-nav a.router-link-exact-active:hover {
-  background-color: transparent;
-}
-
-nav a {
-  display: inline-block;
-  padding: 0 1rem;
-  border-left: 1px solid var(--color-border);
-}
-
-nav a:first-of-type {
-  border: 0;
-}
-
-@media (min-width: 1024px) {
-  header {
-    display: flex;
-    place-items: center;
-    padding-right: calc(var(--section-gap) / 2);
-  }
-
-  .logo {
-    margin: 0 2rem 0 0;
-  }
-
-  header .wrapper {
-    display: flex;
-    place-items: flex-start;
-    flex-wrap: wrap;
-  }
-
-  nav {
-    text-align: left;
-    margin-left: -1rem;
-    font-size: 1rem;
-
-    padding: 1rem 0;
-    margin-top: 1rem;
-  }
-}
 </style>
