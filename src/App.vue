@@ -30,13 +30,13 @@ import RendezVousBtn from './components/RendezVousBtn.vue'
 
     <div class="collapse navbar-collapse justify-content-end pb-3 pb-lg-0" id="collapsibleNavbar">
 			<ul class="navbar-nav">
-				<li class="nav-item a-propos">
+				<li class="nav-item a-propos my-auto">
 					<RouterLink to="/a-propos" class="nav-link pt-3 pb-1 pb-lg-3">A Propos</RouterLink>
 				</li>
-        <li class="nav-item services">
+        <li class="nav-item services my-auto">
           <RouterLink to="/services" class="nav-link pt-3 pb-1 pb-lg-3">Services</RouterLink>
         </li>
-				<li class="nav-item contact">
+				<li class="nav-item contact my-auto">
 					<RouterLink to="/contact" class="nav-link pt-3 pb-1 pb-lg-3">Contact</RouterLink>
 				</li>
 				<li class="nav-item rendez-vous">
@@ -48,10 +48,9 @@ import RendezVousBtn from './components/RendezVousBtn.vue'
 
   <RouterView />
 
-
 </template>
 
-<style scoped>
+<style scoped lang="scss">
 .navbar {
   height: 60px;
   background-color: var(--vt-c-black-mute);
@@ -60,6 +59,14 @@ import RendezVousBtn from './components/RendezVousBtn.vue'
   box-shadow: 0 5px 12px 0 rgba(0, 0, 0, 0.5);
   backdrop-filter: blur(6.6px);
   -webkit-backdrop-filter: blur(6.6px);
+
+  & .nav-link {
+    color: var(--vt-c-white-mute);
+
+    &:hover {
+      background-color: var(--vt-c-black-mute);
+    }
+  }
 }
 
 

@@ -1,5 +1,7 @@
 <template>
   <div class="container-fluid about">
+    <h1 class="text-center">Notre Equipe</h1>
+    <br>
     <div class="row justify-content-around dr-card">
       <div class="col-12 col-lg-3 mb-3">
         <div class="row justify-content-center">
@@ -59,7 +61,7 @@
     
     & img {
       width: 100%;
-      // height: 200px;
+      max-height: 300px;
       object-fit: cover;
       aspect-ratio: 1;
     }
