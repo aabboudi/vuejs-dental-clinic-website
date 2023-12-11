@@ -36,6 +36,9 @@ import RendezVousBtn from './components/RendezVousBtn.vue'
         <li class="nav-item services my-auto">
           <RouterLink to="/services" class="nav-link pt-3 pb-1 pb-lg-3">Services</RouterLink>
         </li>
+				<li class="nav-item blog my-auto">
+					<RouterLink to="/blog" class="nav-link pt-3 pb-1 pb-lg-3">Blog</RouterLink>
+				</li>
 				<li class="nav-item contact my-auto">
 					<RouterLink to="/contact" class="nav-link pt-3 pb-1 pb-lg-3">Contact</RouterLink>
 				</li>
@@ -46,7 +49,9 @@ import RendezVousBtn from './components/RendezVousBtn.vue'
 		</div>
   </nav>
 
-  <RouterView />
+  <div class="container-fluid">
+    <RouterView />
+  </div>
 
 </template>
 
@@ -63,12 +68,13 @@ import RendezVousBtn from './components/RendezVousBtn.vue'
   & .nav-link {
     color: var(--vt-c-white-mute);
 
-    &:hover {
-      background-color: var(--vt-c-black-mute);
-    }
   }
 }
 
+.container-fluid {
+  margin-top: 60px;
+  padding-block: 30px;
+}
 
 
 </style>
