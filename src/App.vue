@@ -51,6 +51,23 @@ import RendezVousBtn from './components/RendezVousBtn.vue'
 
   <RouterView />
 
+  <hr>
+
+  <div class="container-fluid footer">
+    <div class="row">
+      <div class="col-12 col-md-8">
+        <div class="h5">Centre Dentaire Bakraoui</div>
+        <div>Avenue FAR | 0600-000-000</div>
+        <div class="links">
+
+        </div>
+      </div>
+      <div class="col-12 col-md-4">
+        <img src="@/assets/logo.svg" alt="">
+      </div>
+    </div>
+  </div>
+
 </template>
 
 <style scoped lang="scss">
@@ -68,8 +85,4 @@ import RendezVousBtn from './components/RendezVousBtn.vue'
 
   }
 }
-
-
-
-
 </style>
