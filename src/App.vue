@@ -72,8 +72,9 @@ import RendezVousBtn from './components/RendezVousBtn.vue'
 }
 
 .container-fluid {
-  margin-top: 60px;
-  padding-block: 30px;
+  // margin-top: 60px;
+  // padding-block: 30px;
+  padding-inline: 0px;
 }
 
 

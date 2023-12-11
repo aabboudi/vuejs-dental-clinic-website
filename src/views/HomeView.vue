@@ -6,10 +6,10 @@
 
   <!-- LANDING -->
   <div class="row row-landing justify-content-center align-items-center">
-    <div class="col-12 col-md-6 order-1 order-md-0">
+    <div class="col-12 col-md-6">
       <h1 class="font-weight-bold text-center text-md-left">Votre Cabinet Dentaire Le Plus Tech</h1>
     </div>
-    <div class="col-12 col-md-6 order-0 order-md-1 d-flex justify-content-center align-items-center">
+    <div class="col-12 col-md-6 d-flex justify-content-center align-items-center">
       <img src="/jaw-xray.jpg" alt="" class="jaw-xray">
     </div>
   </div>

@@ -14,7 +14,7 @@
   /* font-size: 18px; */
   color: $clrPrimary;
   border: 2px solid $clrPrimary;
-  border-radius: 16px;
+  border-radius: 8px;
   background-color: transparent;
   font-weight: 600;
   transition: all 0.3s cubic-bezier(0.23, 1, 0.320, 1);
