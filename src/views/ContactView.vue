@@ -1,4 +1,5 @@
 <template>
+<div class="container-fluid">
   <!-- START OF FORM ROW -->
   <div class="row justify-content-center">
     <div class="col-10 col-md-8 col-lg-6">
@@ -58,11 +59,12 @@
     </div>
   </div>
   <!-- END OF FORM ROW -->
+</div>
 
 </template>
 
 <style scoped lang="scss">
-.container-fluid.contact {
+.container-fluid {
   margin-top: 60px;
   padding-block: 30px;
 }

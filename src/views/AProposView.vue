@@ -1,6 +1,8 @@
 <template>
-  <h1 class="text-center">Notre Equipe</h1>
-  <br>
+<div class="container-fluid">
+  <div class="row">
+    <h1 class="text-center">Notre Equipe</h1>
+  </div>
   <div class="row justify-content-around dr-card">
     <div class="col-12 col-lg-3 mb-3">
       <div class="row justify-content-center">
@@ -44,18 +46,25 @@
 
 
   </div>
+</div>
 
 </template>
 
 <style scope lang="scss">
-  .dr-card {
-    // height: 400px;
-    
-    & img {
-      width: 100%;
-      max-height: 300px;
-      object-fit: cover;
-      aspect-ratio: 1;
-    }
+
+.container-fluid {
+  margin-top: 60px;
+  padding-block: 30px;
+}
+
+.dr-card {
+  // height: 400px;
+  
+  & img {
+    width: 100%;
+    max-height: 300px;
+    object-fit: cover;
+    aspect-ratio: 1;
   }
+}
 </style>
