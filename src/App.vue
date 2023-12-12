@@ -22,6 +22,7 @@ import RendezVousBtn from './components/RendezVousBtn.vue'
   <nav class="navbar navbar-expand fixed-top font-weight-bold py-2 py-lg-0">
     <RouterLink to="/">
       <img src="/src/assets/logo.svg" alt="" height="40px">
+      <!-- MAKE COLOR DYNAMIC -->
     </RouterLink>
     
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -63,7 +64,7 @@ import RendezVousBtn from './components/RendezVousBtn.vue'
         </div>
       </div>
       <div class="col-12 col-md-4">
-        <img src="@/assets/logo.svg" alt="">
+        <img src="@/assets/logo.svg" alt="" class="logo">
       </div>
     </div>
   </div>
@@ -84,5 +85,14 @@ import RendezVousBtn from './components/RendezVousBtn.vue'
     color: var(--vt-c-white-mute);
 
   }
+}
+
+hr {
+  background-color: var(--color-text);
+  margin-inline: 30px;
+}
+
+.footer .logo {
+  width: 100px;
 }
 </style>

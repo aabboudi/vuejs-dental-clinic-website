@@ -77,19 +77,22 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // If there are no errors, you can proceed to process the form data
     if (empty($firstNameErr) && empty($lastNameErr) && empty($emailErr) && empty($phoneErr) && empty($servicesErr)) {
         // Process the form data here, e.g., send an email, save to a database, etc.
+        echo "<div>$firstName <br> $lastName <br> $email <br> $phone <br> $services</div>";
         
-        // Example: Send an email
-        $to = "your@example.com";
-        $subject = "New Form Submission";
-        $message = "Name: $firstName $lastName\nEmail: $email\nPhone: $phone\nServices: $services";
-        mail($to, $subject, $message);
+    //     // Example: Send an email
+    //     $to = "your@example.com";
+    //     $subject = "New Form Submission";
+    //     $message = "Name: $firstName $lastName\nEmail: $email\nPhone: $phone\nServices: $services";
+    //     mail($to, $subject, $message);
 
-        // Log successful form submissions
-        error_log("Form submitted successfully: $firstName $lastName, $email, $phone, $services", 3, "/logfile.log");
+    //     // Log successful form submissions
+    //     error_log("Form submitted successfully: $firstName $lastName, $email, $phone, $services", 3, "/logfile.log");
 
-        // You may redirect the user to a thank you page after processing the form.
-        header("Location: http://example.com/thank_you.php");
-        exit();
+    //     // You may redirect the user to a thank you page after processing the form.
+    //     header("Location: http://example.com/thank_you.php");
+    //     exit();
     }
+
+    else {echo "<div>ERROR</div>";}
 }
 ?>

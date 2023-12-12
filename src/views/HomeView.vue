@@ -1,6 +1,8 @@
-<!-- <script setup> -->
-<!-- // import TheWelcome from '../components/TheWelcome.vue' -->
-<!-- </script> -->
+
+<script setup>
+import RendezVousBtn from '../components/RendezVousBtn.vue';
+// import TheWelcome from '../components/TheWelcome.vue'
+</script>
 
 <template>
 
@@ -9,6 +11,7 @@
     <div class="row row-landing justify-content-around align-items-center">
       <div class="col-12 col-md-6">
         <h1 class="font-weight-bold text-center text-md-left">Votre Cabinet Dentaire Le Plus Tech</h1>
+        <RendezVousBtn />
       </div>
       <div class="col-12 col-md-5 d-flex justify-content-center align-items-center">
         <img src="/jaw-xray.jpg" alt="" class="jaw-xray">
@@ -93,6 +96,7 @@
   & .jaw-xray {
     height: 30vh;
     mix-blend-mode: screen;
+    filter: hue-rotate(180deg) grayscale(1);
     animation: hoverAnimation 5s infinite ease-in-out;
   }
 }

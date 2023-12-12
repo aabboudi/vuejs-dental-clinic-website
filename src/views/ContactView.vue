@@ -8,7 +8,7 @@
           <h1>Contactez-Nous !</h1>
         </div>
         <div class="col-12">
-          <form action="@/contact-script.php" method="POST" class="form">
+          <form action="../contact-script.php" method="POST" class="form">
 
             <div class="row form-group">
               <div class="col-12 col-md-6">
@@ -24,7 +24,7 @@
                 <input type="email" class="form-control" name="email" placeholder="Email">
               </div>
               <div class="col-12 col-md-4">
-                <input type="tel" class="form-control" name="phone" placeholder="Telephone">
+                <input type="tel" class="form-control" name="phone" placeholder="Telephone" required>
               </div>
             </div>
 
@@ -40,7 +40,7 @@
 
             <div class="row form-group">
               <div class="col-12">
-                <textarea name="msg" id="msg" rows="5" class="form-control" placeholder="Message..."></textarea>
+                <textarea name="msg" id="msg" rows="5" class="form-control" placeholder="Message..." required></textarea>
               </div>
             </div>
 
