@@ -18,11 +18,11 @@ import RendezVousBtn from './components/RendezVousBtn.vue'
       </nav>
     </div>
   </header> -->
-
-  <nav class="navbar navbar-expand fixed-top font-weight-bold py-2 py-lg-0">
+  
+  <!-- MAKE LOGO COLOR DYNAMIC -->
+  <nav class="navbar navbar-expand-lg fixed-top font-weight-bold py-2 py-lg-0">
     <RouterLink to="/">
       <img src="/src/assets/logo.svg" alt="" height="40px">
-      <!-- MAKE COLOR DYNAMIC -->
     </RouterLink>
     
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -44,11 +44,17 @@ import RendezVousBtn from './components/RendezVousBtn.vue'
 					<RouterLink to="/contact" class="nav-link pt-3 pb-1 pb-lg-3">Contact</RouterLink>
 				</li>
 				<li class="nav-item rendez-vous">
-					<RouterLink to="/rendez-vous" class="nav-link pt-3 pb-1 pb-lg-3"><RendezVousBtn /></RouterLink>
+					<RouterLink to="/rendez-vous" class="nav-link pt-3 pb-1 pb-lg-3">Rendez-Vous</RouterLink>
 				</li>
+				<!-- <li class="nav-item rendez-vous">
+					<RouterLink to="/rendez-vous" class="nav-link pt-3 pb-1 pb-lg-3"><RendezVousBtn /></RouterLink>
+				</li> -->
 			</ul>
 		</div>
   </nav>
+
+
+
 
   <RouterView />
 
@@ -73,9 +79,9 @@ import RendezVousBtn from './components/RendezVousBtn.vue'
 
 <style scoped lang="scss">
 .navbar {
-  height: 60px;
-  background-color: var(--vt-c-black-mute);
-  background: rgba(255, 255, 255, 0.24);
+  min-height: 60px;
+  // background-color: var(--vt-c-black-mute);
+  background: rgba(var(--color-background-soft) 0.1);
   border-radius: 0 0 8px 8px;
   box-shadow: 0 5px 12px 0 rgba(0, 0, 0, 0.5);
   backdrop-filter: blur(6.6px);
@@ -86,6 +92,120 @@ import RendezVousBtn from './components/RendezVousBtn.vue'
 
   }
 }
+
+/* NAVBAR SCSS CODE */
+
+.nav-item {
+  margin: 0 16px;
+  font-size: 18px;
+  text-align: center;
+  width: max-content;
+  position: relative;
+
+  &:after {
+      content: "";
+      width: 0;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      height: 3px;
+      background-color: #fff;
+      transition: width 0.3s ease 0s, left 0.3s ease 0s;
+  }
+  
+  &:hover:after {
+      width: 100%; 
+      left: 0; 
+  }
+}
+
+@media only screen and (max-width: 991px) {
+  .nav-item {
+      padding-inline: 8px;
+      margin-inline: auto;
+  }
+
+  .nav-item:after {
+      transition-duration: 0s;
+  }
+}
+
+.nav-link {
+  color: #fff !important;
+}
+
+.navbar-toggler {
+  border-width: 0 !important;
+
+  &:focus {
+      outline: none;
+  }
+}
+
+.hamburger-menu {
+  width: 30px;
+  height: 20px;
+  position: relative;
+  margin: 0px;
+  -webkit-transform: rotate(0deg);
+  -moz-transform: rotate(0deg);
+  -o-transform: rotate(0deg);
+  transform: rotate(0deg);
+  -webkit-transition: .5s ease-in-out;
+  -moz-transition: .5s ease-in-out;
+  -o-transition: .5s ease-in-out;
+  transition: .5s ease-in-out;
+  cursor: pointer;
+}
+
+.hamburger-menu span {
+  display: block;
+  position: absolute;
+  background: #e3f2fd;
+  height: 3px;
+  width: 100%;
+  border-radius: 9px;
+  opacity: 1;
+  left: 0;
+  -webkit-transform: rotate(0deg);
+  -moz-transform: rotate(0deg);
+  -o-transform: rotate(0deg);
+  transform: rotate(0deg);
+  -webkit-transition: .25s ease-in-out;
+  -moz-transition: .25s ease-in-out;
+  -o-transition: .25s ease-in-out;
+  transition: .25s ease-in-out;
+
+  &:nth-child(1) {top: 0px;}
+  &:nth-child(2) {top: 10px;}
+  &:nth-child(3) {top: 10px;}
+  &:nth-child(4) {top: 20px;}
+}
+
+.hamburger-menu.open span {
+  &:nth-child(1) {
+      top: 11px;
+      width: 0%;
+      left: 50%;}
+
+  &:nth-child(2) {
+      -webkit-transform: rotate(45deg);
+      -moz-transform: rotate(45deg);
+      -o-transform: rotate(45deg);
+      transform: rotate(45deg);}
+
+  &:nth-child(3) {
+      -webkit-transform: rotate(-45deg);
+      -moz-transform: rotate(-45deg);
+      -o-transform: rotate(-45deg);
+      transform: rotate(-45deg);}
+
+  &:nth-child(4) {
+      top: 11px;
+      width: 0%;
+      left: 50%;}
+}
+
 
 hr {
   background-color: var(--color-text);

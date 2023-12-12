@@ -14,3 +14,11 @@ const app = createApp(App)
 app.use(router)
 
 app.mount('#app')
+
+document.getElementsByClassName("hamburger-menu")[0].addEventListener("click", function(){
+    if(!document.getElementsByClassName("navbar-collapse")[0].classList.contains("show")) {
+      document.getElementsByClassName("hamburger-menu")[0].classList.add("open");
+    } else {
+      document.getElementsByClassName("hamburger-menu")[0].classList.remove("open");
+    }
+  });
