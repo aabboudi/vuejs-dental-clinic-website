@@ -1,7 +1,7 @@
 <template>
-<div class="container-fluid">
+<div class="container-fluid services-page">
 
-  <div class="row">
+  <div class="row justify-content-center">
     <h1 class="text-center">Equipe Medicale</h1>
   </div>
 
@@ -11,7 +11,7 @@
         <div class="col-12 col-md-4">
           <img src="/test.jpg" alt="" class="rounded shadow">
         </div>
-        <div class="col-12 col-md-7">
+        <div class="col-12 col-md-7 col-lg-5">
           <div class="h3 font-weight-bold">Dr. Flan Bakraoui</div>
           <div class="h5 font-italic">Chirurgien Dentiste</div>
           <div class="text-md-justify">Laureat de l'Institut National de je ne sais quoi, Dr. Adil est l'un des je ne sais quoi les plus pertinents de la region. Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo placeat optio odio porro exercitationem et labore autem iste non nesciunt.</div>
@@ -24,7 +24,7 @@
         <div class="col-12 col-md-4">
           <img src="/test.jpg" alt="" class="rounded shadow">
         </div>
-        <div class="col-12 col-md-7">
+        <div class="col-12 col-md-7 col-lg-5">
           <div class="h3 font-weight-bold">Dr. Flan Bakraoui</div>
           <div class="h5 font-italic">Lorem, ipsum dolor.</div>
           <div class="text-md-justify">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nam ipsam modi dolor unde praesentium sequi libero amet minus dolorum suscipit beatae delectus, tempore earum harum odio dolorem eaque cupiditate vero possimus, reiciendis quisquam sapiente corporis qui. Eaque nemo alias ab. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptatum, sed.</div>
@@ -37,7 +37,7 @@
         <div class="col-12 col-md-4">
           <img src="/test.jpg" alt="" class="rounded shadow">
         </div>
-        <div class="col-12 col-md-7">
+        <div class="col-12 col-md-7 col-lg-5">
           <div class="h3 font-weight-bold">Dr. Flan Foulani</div>
           <div class="h5 font-italic">Lorem, ipsum dolor.</div>
           <div class="text-md-justify">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nam ipsam modi dolor unde praesentium sequi libero amet minus dolorum suscipit beatae delectus, tempore earum harum odio dolorem eaque cupiditate vero possimus, reiciendis quisquam sapiente corporis qui. Eaque nemo alias ab. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptatum, sed.</div>
@@ -60,11 +60,11 @@
 
 <style scope lang="scss">
 
-.container-fluid {
+.container-fluid.services-page {
   margin-top: 60px;
   padding-block: 30px;
 
-  & * {
+  &>* {
     max-width: 1440px;
     margin-inline: auto;
   }
@@ -76,7 +76,7 @@
   & img {
     width: 100%;
     min-height: 200px;
-    max-height: 400px;
+    max-height: 300px;
     object-fit: cover;
     aspect-ratio: 1;
   }

@@ -93,6 +93,10 @@ import RendezVousBtn from '../components/RendezVousBtn.vue';
 .row-landing {
   min-height: 100vh;
 
+  // & h1 {
+  //   color: var(--color-primary);
+  // }
+
   & .jaw-xray {
     height: 30vh;
     mix-blend-mode: screen;

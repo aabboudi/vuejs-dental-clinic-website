@@ -1,18 +1,7 @@
+@import './_reset.scss';
 @import './_globals.scss';
 
-.cstm-rounded {
-  border-radius: 16px;
-}
 
-@media only screen and (min-width: 768px) {
-  .text-md-justify {
-    text-align: justify;
-  }
-}
-
-.justify-content-evenly {
-  justify-content: space-evenly;
-}
 
 
 

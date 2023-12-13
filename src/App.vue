@@ -2,27 +2,15 @@
 import { RouterLink, RouterView } from 'vue-router'
 // import HelloWorld from './components/HelloWorld.vue'
 import RendezVousBtn from './components/RendezVousBtn.vue'
+// document.querySelector("#copyright-disclaimer span").innerText = `${new Date().getFullYear()}`;
 </script>
 
 <template>
-
-  <!-- <header>
-    <img alt="Vue logo" class="logo" src="@/assets/logo.svg" width="125" height="125" />
-
-    <div class="wrapper">
-      <HelloWorld msg="You did it!" />
-
-      <nav>
-        <RouterLink to="/">Logo</RouterLink>
-        <RouterLink to="/a-propos">A Propos</RouterLink>
-      </nav>
-    </div>
-  </header> -->
   
   <!-- MAKE LOGO COLOR DYNAMIC -->
   <nav class="navbar navbar-expand-lg fixed-top font-weight-bold py-2 py-lg-0">
     <RouterLink to="/">
-      <img src="/src/assets/logo.svg" alt="" height="40px">
+      <img src="@/assets/logo.svg" alt="" height="40px">
     </RouterLink>
     
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -61,17 +49,23 @@ import RendezVousBtn from './components/RendezVousBtn.vue'
   <hr>
 
   <div class="container-fluid footer">
-    <div class="row">
-      <div class="col-12 col-md-8">
+    <div class="row py-4">
+      <div class="col-12 col-md-8 order-1 order-md-0">
         <div class="h5">Centre Dentaire Bakraoui</div>
         <div>Avenue FAR | 0600-000-000</div>
         <div class="links">
-
+          <a href="#!" class="cstm-link">Link1</a>
         </div>
       </div>
-      <div class="col-12 col-md-4">
-        <img src="@/assets/logo.svg" alt="" class="logo">
+      <div class="col-12 col-md-4 order-0 order-md-1">
+        <div class="row justify-content-center justify-content-md-start">
+          <img src="@/assets/logo.svg" alt="" class="logo">
+        </div>
       </div>
+    </div>
+    <div class="row row-copyright justify-content-center text-center user-select-none p-1">
+      <div class="col-12 small" id="copyright-disclaimer">&copy; <span>2023</span> Centre Dentaire Bakraoui. Tous droits réservés.</div>
+      <!-- Maybe make the year dynamic -->
     </div>
   </div>
 
@@ -88,13 +82,12 @@ import RendezVousBtn from './components/RendezVousBtn.vue'
   -webkit-backdrop-filter: blur(6.6px);
 
   & .nav-link {
-    color: var(--vt-c-white-mute);
+    color: var(--color-text);
 
   }
 }
 
 /* NAVBAR SCSS CODE */
-
 .nav-item {
   margin: 0 16px;
   font-size: 18px;
@@ -103,35 +96,31 @@ import RendezVousBtn from './components/RendezVousBtn.vue'
   position: relative;
 
   &:after {
-      content: "";
-      width: 0;
-      position: absolute;
-      bottom: 0;
-      left: 0;
-      height: 3px;
-      background-color: #fff;
-      transition: width 0.3s ease 0s, left 0.3s ease 0s;
+    content: "";
+    width: 0;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 3px;
+    background-color: var(--color-text);
+    transition: width 0.3s ease 0s, left 0.3s ease 0s;
   }
   
   &:hover:after {
-      width: 100%; 
-      left: 0; 
+    width: 100%; 
+    left: 0; 
   }
 }
 
 @media only screen and (max-width: 991px) {
   .nav-item {
-      padding-inline: 8px;
-      margin-inline: auto;
+    padding-inline: 8px;
+    margin-inline: auto;
   }
 
   .nav-item:after {
-      transition-duration: 0s;
+    transition-duration: 0s;
   }
-}
-
-.nav-link {
-  color: #fff !important;
 }
 
 .navbar-toggler {
@@ -161,7 +150,7 @@ import RendezVousBtn from './components/RendezVousBtn.vue'
 .hamburger-menu span {
   display: block;
   position: absolute;
-  background: #e3f2fd;
+  background: var(--color-text);
   height: 3px;
   width: 100%;
   border-radius: 9px;
@@ -184,26 +173,30 @@ import RendezVousBtn from './components/RendezVousBtn.vue'
 
 .hamburger-menu.open span {
   &:nth-child(1) {
-      top: 11px;
-      width: 0%;
-      left: 50%;}
+    top: 11px;
+    width: 0%;
+    left: 50%;
+  }
 
   &:nth-child(2) {
-      -webkit-transform: rotate(45deg);
-      -moz-transform: rotate(45deg);
-      -o-transform: rotate(45deg);
-      transform: rotate(45deg);}
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+    transform: rotate(45deg);
+  }
 
   &:nth-child(3) {
-      -webkit-transform: rotate(-45deg);
-      -moz-transform: rotate(-45deg);
-      -o-transform: rotate(-45deg);
-      transform: rotate(-45deg);}
+    -webkit-transform: rotate(-45deg);
+    -moz-transform: rotate(-45deg);
+    -o-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+  }
 
   &:nth-child(4) {
-      top: 11px;
-      width: 0%;
-      left: 50%;}
+    top: 11px;
+    width: 0%;
+    left: 50%;
+  }
 }
 
 
@@ -214,5 +207,9 @@ hr {
 
 .footer .logo {
   width: 100px;
+}
+
+.row-copyright {
+  background-color: rgba(var(--color-background),1) !important;
 }
 </style>

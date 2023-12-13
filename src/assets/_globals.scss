@@ -1,10 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100;200;300;400;500;600;700;800;900&display=swap');
-
-$fontPrimary: 'Roboto Slab', serif;
-
-$test: "#000000";
-$clrPrimary: var(--vt-c-white-soft);
-
+// Color scheme
 :root {
   --vt-c-white: #ffffff;
   --vt-c-white-soft: #f8f8f8;
@@ -14,7 +8,8 @@ $clrPrimary: var(--vt-c-white-soft);
   --vt-c-black-soft: #222222;
   --vt-c-black-mute: #282828;
 
-  --vt-c-primary: #d6b975;
+  --vt-c-primary-light: #d6b975;
+  --vt-c-primary-dark: #8d7744;
 
   --vt-c-divider-light-1: rgba(60, 60, 60, 0.29);
   --vt-c-divider-light-2: rgba(60, 60, 60, 0.12);
@@ -39,6 +34,8 @@ $clrPrimary: var(--vt-c-white-soft);
   --color-heading: var(--vt-c-text-light-1);
   --color-text: var(--vt-c-text-light-1);
 
+  --color-primary: var(--vt-c-primary-dark);
+  
   --section-gap: 160px;
 }
 
@@ -47,33 +44,38 @@ $clrPrimary: var(--vt-c-white-soft);
     --color-background: var(--vt-c-black);
     --color-background-soft: var(--vt-c-black-soft);
     --color-background-mute: var(--vt-c-black-mute);
-
+    
     --color-border: var(--vt-c-divider-dark-2);
     --color-border-hover: var(--vt-c-divider-dark-1);
-
+    
     --color-heading: var(--vt-c-text-dark-1);
     --color-text: var(--vt-c-text-dark-2);
+
+    --color-primary: var(--vt-c-primary-light);
   }
 }
 
-*,
-*::before,
-*::after {
-  box-sizing: border-box;
-  margin: 0;
-  font-weight: normal;
-}
-
-body {
-  min-height: 100vh;
+// Utilities
+.cstm-link {
+  text-decoration: none !important;
   color: var(--color-text);
-  background: var(--color-background);
-  transition: color 0.5s, background-color 0.5s;
-  line-height: 1.6;
-  font-family: $fontPrimary;
-  font-size: 15px;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  font-weight: bold;
+  
+  &:hover, &:focus {
+      color: var(--color-border);
+  }
 }
 
+.cstm-rounded {
+  border-radius: 16px;
+}
+
+@media only screen and (min-width: 768px) {
+  .text-md-justify {
+    text-align: justify;
+  }
+}
+
+.justify-content-evenly {
+  justify-content: space-evenly;
+}

@@ -12,8 +12,8 @@
   position: relative;
   padding: 8px 10px;
   /* font-size: 18px; */
-  color: $clrPrimary;
-  border: 2px solid $clrPrimary;
+  color: var(--color-text);
+  border: 2px solid var(--color-text);
   border-radius: 8px;
   background-color: transparent;
   font-weight: 600;
@@ -31,7 +31,7 @@
   border-radius: inherit;
   scale: 0;
   z-index: -1;
-  background-color: $clrPrimary;
+  background-color: var(--color-text);
   transition: all 0.6s cubic-bezier(0.23, 1, 0.320, 1);
 }
 
@@ -40,7 +40,7 @@
 }
 
 .rdv-btn:hover {
-  color: #212121;
+  color: var(--color-background);
   // scale: 1.1;
   box-shadow: 0 0px 20px rgba(193, 163, 98,0.4);
 }

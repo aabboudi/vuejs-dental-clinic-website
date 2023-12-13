@@ -18,3 +18,6 @@ The following technologies are used in the project:
 - Popper, Open Graph Protocol
 - Apache HTTP Server
 - Google Analytics
+
+## Misc
+Used ```$ffPrimary``` instead of ```var(--ff-primary)``` to allow server-side rendering of the font family. Colors are handled client-side with the second syntax.
