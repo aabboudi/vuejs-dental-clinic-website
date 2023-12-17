@@ -52,7 +52,7 @@ import RendezVousBtn from './components/RendezVousBtn.vue'
     <div class="row py-4">
       <div class="col-12 col-md-8 order-1 order-md-0">
         <div class="h5">Centre Dentaire Bakraoui</div>
-        <div>Avenue FAR | 0600-000-000</div>
+        <div>Avenue des FAR</div>
         <div class="links">
           <a href="#!" class="cstm-link">Link1</a>
         </div>
@@ -75,7 +75,7 @@ import RendezVousBtn from './components/RendezVousBtn.vue'
 .navbar {
   min-height: 60px;
   // background-color: var(--vt-c-black-mute);
-  background: rgba(var(--color-background-soft) 0.1);
+  background: rgba(var(--color-background-soft), .5);
   border-radius: 0 0 8px 8px;
   box-shadow: 0 5px 12px 0 rgba(0, 0, 0, 0.5);
   backdrop-filter: blur(6.6px);

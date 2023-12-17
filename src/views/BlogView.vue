@@ -1,6 +1,16 @@
+<script setup>
+import BlogArticle from '../components/BlogArticle.vue'
+</script>
+
 <template>
   <div class="container-fluid">
-    <h1>This is a blog page</h1>
+    <div class="row">
+      <div class="col-12 h1 text-center">
+        Blog Medical
+      </div>
+    </div>
+    <BlogArticle />
+    <hr>
   </div>
 </template>
 
@@ -8,5 +18,9 @@
 .container-fluid {
   margin-top: 60px;
   padding-block: 30px;
+}
+
+hr {
+  background-color: var(--color-text);
 }
 </style>

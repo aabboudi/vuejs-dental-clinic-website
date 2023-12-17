@@ -2,6 +2,11 @@
   <button class="rdv-btn">
     Rendez-Vous
   </button>
+
+  <!-- Calendly link widget begin -->
+
+  <a href="" onclick="Calendly.initPopupWidget({url: 'https://calendly.com/sparedev/rendez-vous'});return false;">Schedule time with me</a>
+<!-- Calendly link widget end -->
 </template>
 
 <style scoped lang="scss">

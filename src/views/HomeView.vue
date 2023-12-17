@@ -99,6 +99,7 @@ import RendezVousBtn from '../components/RendezVousBtn.vue';
 
   & .jaw-xray {
     height: 30vh;
+    transform: scaleY(1.5);
     mix-blend-mode: screen;
     filter: hue-rotate(180deg) grayscale(1);
     animation: hoverAnimation 5s infinite ease-in-out;
@@ -113,9 +114,9 @@ import RendezVousBtn from '../components/RendezVousBtn.vue';
 }
 
 @keyframes hoverAnimation {
-  0% {transform: scaleX(-1) translateY(0);}
-  50% {transform: scaleX(-1) translateY(-10px);}
-  100% {transform: scaleX(-1) translateY(0);}
+  0% {transform: scaleX(-1.5) translateY(0);}
+  50% {transform: scaleX(-1.5) translateY(-10px);}
+  100% {transform: scaleX(-1.5) translateY(0);}
 }
 
 .row-diff-factor img {
