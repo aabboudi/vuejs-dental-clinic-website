@@ -33,6 +33,11 @@ const router = createRouter({
       path: '/rendez-vous',
       name: 'rendez-vous',
       component: () => import('../views/RendezVousView.vue')
+    },
+    {
+      path: '/:catchAll(.*)',
+      name: 'not-found',
+      redirect: '/'
     }
   ]
 })
