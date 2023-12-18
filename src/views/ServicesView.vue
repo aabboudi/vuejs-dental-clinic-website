@@ -26,9 +26,10 @@ import ServicesRow from '../components/ServicesRow.vue'
 </template>
 
 <style scoped lang="scss">
-.container-fluid {
-  margin: 0;
-  padding: 0;
-}
+// .container-fluid {
+//   margin: 0;
+//   padding: 0;
+// }
+// Causes overflow issues
 
 </style>

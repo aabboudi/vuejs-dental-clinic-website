@@ -10,10 +10,11 @@ Vue.js website for a dental clinic
 
 The following technologies are used in the project:
 - Dev: HTML, CSS, JS
-- UI frameworks: VueJS, Bootstrap, SASS
-- JS librarires: jQuery
-- CDN: Cloudflare, Unpkg, Google Hosted Libraries, CDNJS
+- UI: Vue.js, Bootstrap, SASS
+- JS librarires: jQuery, core-js
+- CDN: Cloudflare, Google Hosted Libraries, CDNJS
 - Programming langs: PHP
+- Appointment scheduling: Calendly API
 - Font scripts: Font Awesome, Google Fonts API
 - Popper, Open Graph Protocol
 - Apache HTTP Server

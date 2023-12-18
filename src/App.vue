@@ -10,7 +10,7 @@ import RendezVousBtn from './components/RendezVousBtn.vue'
   <!-- MAKE LOGO COLOR DYNAMIC -->
   <nav class="navbar navbar-expand-lg fixed-top font-weight-bold py-2 py-lg-0">
     <RouterLink to="/">
-      <img src="@/assets/logo.svg" alt="" height="40px">
+      <img src="@/assets/logo.svg" alt="" height="40px" class="cls-1">
     </RouterLink>
     
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -72,6 +72,8 @@ import RendezVousBtn from './components/RendezVousBtn.vue'
 </template>
 
 <style scoped lang="scss">
+
+.cls-1{fill:#fff;}
 .navbar {
   min-height: 60px;
   // background-color: var(--vt-c-black-mute);

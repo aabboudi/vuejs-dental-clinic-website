@@ -16,7 +16,7 @@ defineProps({
       <div class="h5 mb-3">{{ serviceDesc }}</div>
       <RendezVousBtn />
     </div>
-    <div class="col-12 text-left data-text">
+    <div class="col-11 text-left data-text">
       Lorem, ipsum dolor.
     </div>
   </div>

@@ -8,12 +8,12 @@ import RendezVousBtn from '../components/RendezVousBtn.vue';
 
   <!-- LANDING -->
   <div class="container-fluid">
-    <div class="row row-landing justify-content-around align-items-center">
-      <div class="col-12 col-md-6">
+    <div class="row row-landing justify-content-center align-items-center">
+      <div class="col-12 col-md-5">
         <h1 class="font-weight-bold text-center text-md-left">Votre Cabinet Dentaire Le Plus Tech</h1>
         <RendezVousBtn />
       </div>
-      <div class="col-12 col-md-5 d-flex justify-content-center align-items-center">
+      <div class="col-12 col-md-6 d-flex justify-content-center align-items-center">
         <img src="/jaw-xray.jpg" alt="" class="jaw-xray">
       </div>
     </div>
@@ -99,7 +99,6 @@ import RendezVousBtn from '../components/RendezVousBtn.vue';
 
   & .jaw-xray {
     height: 30vh;
-    transform: scaleY(1.5);
     mix-blend-mode: screen;
     filter: hue-rotate(180deg) grayscale(1);
     animation: hoverAnimation 5s infinite ease-in-out;
@@ -114,9 +113,9 @@ import RendezVousBtn from '../components/RendezVousBtn.vue';
 }
 
 @keyframes hoverAnimation {
-  0% {transform: scaleX(-1.5) translateY(0);}
-  50% {transform: scaleX(-1.5) translateY(-10px);}
-  100% {transform: scaleX(-1.5) translateY(0);}
+  0% {transform: scaleX(-1.2) scaleY(1.2) translateY(0);}
+  50% {transform: scaleX(-1.2) scaleY(1.2) translateY(-10px);}
+  100% {transform: scaleX(-1.2) scaleY(1.2) translateY(0);}
 }
 
 .row-diff-factor img {
