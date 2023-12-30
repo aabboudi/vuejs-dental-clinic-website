@@ -1,12 +1,13 @@
 <template>
-  <button class="rdv-btn">
+  <!-- <button class="rdv-btn">
     Rendez-Vous
-  </button>
+  </button> -->
 
-  <!-- Calendly link widget begin -->
-
-  <a href="" onclick="Calendly.initPopupWidget({url: 'https://calendly.com/sparedev/rendez-vous'});return false;">Schedule time with me</a>
-<!-- Calendly link widget end -->
+  <!-- Calendly link widget -->
+  <a href=""
+    onclick="Calendly.initPopupWidget({url: 'https://calendly.com/sparedev/rendez-vous'});return false;">
+    Rendez-Vous
+  </a>
 </template>
 
 <style scoped lang="scss">
@@ -31,8 +32,8 @@
   position: absolute;
   inset: 0;
   margin: auto;
-  width: 50px;
-  height: 50px;
+  width: 80px;
+  height: 80px;
   border-radius: inherit;
   scale: 0;
   z-index: -1;

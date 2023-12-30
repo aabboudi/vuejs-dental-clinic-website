@@ -2,15 +2,18 @@
 import { RouterLink, RouterView } from 'vue-router'
 // import HelloWorld from './components/HelloWorld.vue'
 import RendezVousBtn from './components/RendezVousBtn.vue'
+import LogoSVG from './components/LogoSVG.vue'
 // document.querySelector("#copyright-disclaimer span").innerText = `${new Date().getFullYear()}`;
 </script>
 
 <template>
   
   <!-- MAKE LOGO COLOR DYNAMIC -->
-  <nav class="navbar navbar-expand-lg fixed-top font-weight-bold py-2 py-lg-0">
+  <nav class="navbar navbar-expand-md fixed-top font-weight-bold py-2 py-lg-0">
+    <!-- Go back to expand lg -->
     <RouterLink to="/">
-      <img src="@/assets/logo.svg" alt="" height="40px" class="cls-1">
+      <!-- <img src="@/assets/logo.svg" alt="" height="40px"> -->
+      <LogoSVG foregroundColor="var(--color-text)" height="40px"/>
     </RouterLink>
     
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -32,7 +35,8 @@ import RendezVousBtn from './components/RendezVousBtn.vue'
 					<RouterLink to="/contact" class="nav-link pt-3 pb-1 pb-lg-3">Contact</RouterLink>
 				</li>
 				<li class="nav-item rendez-vous">
-					<RouterLink to="/rendez-vous" class="nav-link pt-3 pb-1 pb-lg-3">Rendez-Vous</RouterLink>
+					<!-- <RouterLink to="/rendez-vous" class="nav-link pt-3 pb-1 pb-lg-3">Rendez-Vous</RouterLink> -->
+          <RendezVousBtn class="nav-link pt-3 pb-1 pb-lg-3" />
 				</li>
 				<!-- <li class="nav-item rendez-vous">
 					<RouterLink to="/rendez-vous" class="nav-link pt-3 pb-1 pb-lg-3"><RendezVousBtn /></RouterLink>
@@ -59,7 +63,8 @@ import RendezVousBtn from './components/RendezVousBtn.vue'
       </div>
       <div class="col-12 col-md-4 order-0 order-md-1">
         <div class="row justify-content-center justify-content-md-start">
-          <img src="@/assets/logo.svg" alt="" class="logo">
+          <!-- <img src="@/assets/logo.svg" alt="" class="logo"> -->
+          <LogoSVG foregroundColor="var(--color-text)" class="logo" />
         </div>
       </div>
     </div>
@@ -73,19 +78,25 @@ import RendezVousBtn from './components/RendezVousBtn.vue'
 
 <style scoped lang="scss">
 
-.cls-1{fill:#fff;}
+@import "@/assets/_globals.scss";
+
 .navbar {
   min-height: 60px;
-  // background-color: var(--vt-c-black-mute);
-  background: rgba(var(--color-background-soft), .5);
+  background: rgba(220 ,220 ,220 , .5);
   border-radius: 0 0 8px 8px;
   box-shadow: 0 5px 12px 0 rgba(0, 0, 0, 0.5);
   backdrop-filter: blur(6.6px);
   -webkit-backdrop-filter: blur(6.6px);
-
+  
   & .nav-link {
     color: var(--color-text);
 
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  .navbar {
+    background: rgba(28 ,28 ,28 , .5);
   }
 }
 

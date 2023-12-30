@@ -1,7 +1,11 @@
-
 <script setup>
+import { ref, computed } from 'vue';
 import RendezVousBtn from '../components/RendezVousBtn.vue';
+import ServiceCard from '../components/ServiceCard.vue';
 // import TheWelcome from '../components/TheWelcome.vue'
+
+const prefersDarkMode = ref(window.matchMedia('(prefers-color-scheme: dark)').matches);
+const imageSrc = computed(() => prefersDarkMode.value ? '/jaw-xray.jpg' : '/tooth.png');
 </script>
 
 <template>
@@ -11,41 +15,73 @@ import RendezVousBtn from '../components/RendezVousBtn.vue';
     <div class="row row-landing justify-content-center align-items-center">
       <div class="col-12 col-md-5">
         <h1 class="font-weight-bold text-center text-md-left">Votre Cabinet Dentaire Le Plus Tech</h1>
-        <RendezVousBtn />
+        <RendezVousBtn class="btn rdv-btn" />
       </div>
       <div class="col-12 col-md-6 d-flex justify-content-center align-items-center">
-        <img src="/jaw-xray.jpg" alt="" class="jaw-xray">
+        <!-- <img src="/jaw-xray.jpg" alt="" class="jaw-xray"> -->
+        <img :src="imageSrc" alt="Dynamic Image" class="jaw-xray" />
       </div>
     </div>
 
     <div class="row row-pattern justify-content-around px-4 py-5">
       <div class="col-12">
-        <h1 class="text-center">Lorem ipsum dolor sit amet.</h1>
+        <h1 class="text-center">Ce Qu'On Offre</h1>
       </div>
-      <div class="col-12 col-md-3 text-center">
-        <div>icon</div>
-        <div class="h2">Title</div>
-        <div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam, magni.</div>
-      </div>
-      <div class="col-12 col-md-3 text-center">
-        <div>icon</div>
-        <div class="h2">Title</div>
-        <div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam, magni.</div>
-      </div>
-      <div class="col-12 col-md-3 text-center">
-        <div>icon</div>
-        <div class="h2">Title</div>
-        <div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam, magni.</div>
-      </div>
+
+      <ServiceCard
+        serviceTitle="Consultation Generale"
+        serviceDesc="Desc Desc Desc Desc Desc Desc Desc Desc Desc Desc Desc Desc Desc Desc Desc Desc Desc Desc Desc Desc Desc "
+        iconUrl="service-icon-1.png"
+      />
+
+      <ServiceCard
+        serviceTitle="Ordonthologie conservatrice"
+        serviceDesc="Desc"
+        iconUrl="service-icon-2.png"
+      />
+
+      <ServiceCard
+        serviceTitle="Prothese"
+        serviceDesc="Desc"
+        iconUrl="service-icon-3.png"
+      />
+
+      <ServiceCard
+        serviceTitle="Chirurgie orale"
+        serviceDesc="Desc"
+        iconUrl="service-icon-4.png"
+      />
+
+      <ServiceCard
+        serviceTitle="Implantologie"
+        serviceDesc="Desc"
+        iconUrl="service-icon-5.png"
+      />
+
+      <ServiceCard
+        serviceTitle="Parodentologie"
+        serviceDesc="Desc"
+        iconUrl="service-icon-6.png"
+      />
+
+      <ServiceCard
+        serviceTitle="Pedodontie"
+        serviceDesc="Desc"
+        iconUrl="service-icon-5.png"
+      />
+
+      <ServiceCard
+        serviceTitle="Radiologie, imagerie 3D"
+        serviceDesc="Desc"
+        iconUrl="service-icon-6.png"
+      />
+
     </div>
 
-    <div class="row row-diff-factor align-items-center">
-      <div class="col-12 col-md-6">
+    <div class="row row-diff-factor justify-content-center align-items-center">
+      <div class="col-10 col-md-8 text-white text-center">
         <div class="h1">Professionalisme</div>
-        <div>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Molestias facere tenetur accusamus iste quae, tempora quibusdam itaque consequuntur possimus animi sapiente ipsa enim necessitatibus tempore provident laborum sint, optio quis!</div>
-      </div>
-      <div class="col-12 col-md-6">
-        <img src="/service2.jpg" alt="">
+        <div>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Molestias facere tenetur accusamus iste quae, optio quis!</div>
       </div>
     </div>
 
@@ -93,36 +129,38 @@ import RendezVousBtn from '../components/RendezVousBtn.vue';
 .row-landing {
   min-height: 100vh;
 
-  // & h1 {
-  //   color: var(--color-primary);
-  // }
-
   & .jaw-xray {
     height: 30vh;
-    mix-blend-mode: screen;
-    filter: hue-rotate(180deg) grayscale(1);
+    filter: hue-rotate(180deg) grayscale(1) saturate(1);
     animation: hoverAnimation 5s infinite ease-in-out;
+    mix-blend-mode: exclusion;
   }
 }
 
+
 .row-pattern {
   min-height: 300px;
-  background: linear-gradient(#000d, #000d), url("/dental-pattern.jpg");
-  background-position: center;
-  background-size: cover;
+  // background: linear-gradient(#000d, #000d), url("/dental-pattern.jpg");
+  // background-position: center;
+  // background-size: cover;
+  gap: 30px;
 }
 
 @keyframes hoverAnimation {
-  0% {transform: scaleX(-1.2) scaleY(1.2) translateY(0);}
-  50% {transform: scaleX(-1.2) scaleY(1.2) translateY(-10px);}
-  100% {transform: scaleX(-1.2) scaleY(1.2) translateY(0);}
+  0% {transform: scale(-1.2, 1.2) translateY(0);}
+  50% {transform: scale(-1.2, 1.2) translateY(-10px);}
+  100% {transform: scale(-1.2, 1.2) translateY(0);}
 }
 
-.row-diff-factor img {
-  width: 100%;
-  aspect-ratio: 3/4;
-  object-fit: cover;
-  transform: translateY(-30px);
+.row-diff-factor {
+  // width: 100%;
+  // aspect-ratio: 3/4;
+  // object-fit: cover;
+  // transform: translateY(-30px);
+
+  background: linear-gradient(#000d, #000d), url("/service2.jpg");
+  background-position: center;
+  background-size: cover;
 }
 
 .row-blogs {
